@@ -82,5 +82,12 @@ driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
 
 6. After all done then you can run project
 
+```bash
+Steps to Run you automation :
+1. Launch Appium
+2. Go to your feature
+3. Run your scenario
+```
+
 If you have any specific queries reach out to me at [Github](https://github.com/raixa) or [E-Mail](mailto:khalif.rinaldi@gmail.com)
 

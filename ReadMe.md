@@ -29,23 +29,31 @@ $npm -v
 4. Install Android-SDK
 
 ```bash
+if you already install android-sdk , you can skip this step
+```
+```bash
 install :
-$brew install android-sdk
+$brew cask install android-sdk
 ```
 5. Install Build-tools & Platform-tools
 
 ```bash
-To Open SDK manager:
-$android sdk
+Check installed list
+$sdkmanager --list
+
+if Platform-tools already installed you can skip platform-tools installation
 ```
 ```bash
-Check on :
-
-Android SDK Platform-tools
-Android SDK Build-tools
-Google Web Driver
-
-uncheck the other file and install it
+Install platform-tools
+$sdkmanager "platform-tools;(version you want)"
+```
+```bash
+Install build-tools:
+$sdkmanager "build-tools;(version you want)"
+```
+```bash
+Install Google Web Driver
+$sdkmanager "extras;google;webdriver"
 ```
 
 6. Install Appium
@@ -58,6 +66,9 @@ $npm install -g appium
 check appium installed on your machine :
 $appium -v
 ```
+```bash
+You can use Appium standalone version too
+```
 
 7. Write on your .bash_profile
 
@@ -69,8 +80,8 @@ $nano .bash_profile
 ```bash
 Copy to your bash profile :
 
-export ANDROID_HOME=/usr/local/Cellar/android-sdk/24.4.1_1
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export ANDROID_HOME=(your android-sdk path)
+export PATH=$PATH$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export JAVA_HOME=$(/usr/libexec/java_home)
 ```
 
